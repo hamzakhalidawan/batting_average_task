@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 1
+  year_id: 1
+  stint: 1
+  team_id: 1
+  ab: 1
+  h: 1
+
+two:
+  player_id: 1
+  year_id: 1
+  stint: 1
+  team_id: 1
+  ab: 1
+  h: 1

@@ -1,0 +1,15 @@
+<%= form_tag csv_imports_path, multipart: true, style: 'margin-left: 20%' do %>
+    <h1> Batting average </h1>
+    <%= label_tag 'Choose csv file'%>
+    <%= file_field_tag :file %>
+    </br>
+    </br>
+    <h5>Filter BY</h5>
+    <%= label_tag 'Team'%>
+    <%= select_tag 'team', options_for_select([['thunder storm', '1'],['storm fiber', '2'],['storn fire', '3'],['multan sultan', '4'], ['eagle hawks', '5'] ]), :include_blank => true %></br></br>
+    <%= label_tag 'Year'%>
+    <%= select_tag 'year', options_for_select([['2015', '2015'],['2016', '2016'],['2017', '2017'],['2018', '2018'],['2019', '2019'],['2020', '2020'],['2021', '2021']]), :include_blank => true %></br></br>
+	<%= button_tag 'Import' %>
+<% end %>    
+
+

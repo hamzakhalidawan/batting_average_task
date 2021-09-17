@@ -1,0 +1,26 @@
+<table  style= 'margin-left: 20%'>
+    <tr>
+        <th>playerID</th>
+        <th>yearId</th>
+        <th>Team name</th>
+        <th>Batting average</th>
+    </tr>
+    <% @data_total.each do |d| %>
+        <tr>
+            <td><%= d[:player_id] %></td>
+            <td>
+                <%= d[:year_id] %>
+            </td>
+            <td>
+                <% d[:team_name]&.each do |t| %>
+                    <% if d[:team_name].length > 1 %>
+                       <%= t %>,
+                    <% else %>
+                        <%= t %>
+                    <% end %>
+                <% end %>
+            </td>
+            <td><%= d[:batting_average] %></td>
+        </tr>
+    <% end %>
+</table>
